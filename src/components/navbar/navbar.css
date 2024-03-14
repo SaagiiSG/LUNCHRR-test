@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+nav{
+    /* padding-right: 2px; */
+    min-width: 255px;
+    max-width: 255px;
+    max-height: 100vh ;
+    display: flex;
+    flex-direction: column; 
+    /* overflow-y: scroll; */
+    height: fit-content;
+    /* padding-bottom: 24px; */
+    background-color: #30324A;
+
+}
+nav::-webkit-scrollbar{
+    display: none;
+}
+.scroll{
+    width: 100%;
+    margin-top: 180px;
+    min-width: 255px;
+    max-height: 100vh ;
+    overflow-y: scroll;
+    height: fit-content;
+    padding-right: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    
+}
+.scroll::-webkit-scrollbar{
+    display: none;
+}
+.button{
+    width: 100%;
+    height: 52px;
+    display:flex;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1.5px solid #B26CAF;
+}
+.button > .link{
+    text-decoration: none;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: 300ms;
+
+}
+.button >.link:hover{
+    transition: 300ms;
+    color: var(--Accent-pink, #B26CAF);
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.link:visited{
+    text-decoration: none;
+}
+nav::-webkit-scrollbar{
+    display: none;
+}
+
+.scroll::-webkit-scrollbar{
+    display: none;
+}

@@ -1,0 +1,64 @@
+.card{
+    width: 830px;
+    height: 56px;
+    display: flex;
+    padding: 8px 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+    border: 1px solid var(--Primary-pink, #CA53BA);
+    transition: 300ms;
+}
+.name{
+    width: fit-content;
+    height: 100%;
+    display: flex;  
+    gap: 8px;
+}
+.name > p{
+    
+    color: #30324A;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.96px;
+    font-family: "Poppins" , sans-serif;
+}
+.selector{
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    color: transparent;
+    border: var(--Number, 1px) solid #30324A;
+}
+.card:hover{
+    transition: 300ms;
+    scale: 1.01;
+}
+.active-card{
+    display: flex;
+    width: 830px;
+    padding: 8px 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+    border: var(--Number, 1px) solid var(--Primary-pink, #CA53BA);
+    background: var(--Dark-blue, #30324A);
+   
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.96px;
+}
+.active-card > .name > p{
+    color: var(--White, #F5F5F5);
+}
+.active-card > div.selector
+{
+    border-radius: 100px;
+    border: var(--Number, 1px) solid var(--Primary-pink, #CA53BA);
+    background: var(--Primary-pink, #CA53BA);
+}

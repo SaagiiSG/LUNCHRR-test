@@ -1,0 +1,110 @@
+.add-page-container{
+    width:  100%;
+    height: 100vh;
+    background-color: #30324a;
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-end; */
+    overflow: hidden;
+    align-items: flex-start;
+}
+
+.add-page{
+    z-index: 1000;
+    height: 98%;
+    width: 100%;
+    padding-top: 2em;
+    gap: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:  center;
+    background-color: #f5f5f5;
+    border-radius: 24px 0 0 0;
+    align-self: flex-end;
+}
+form{
+    width: 70%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.add-page > h1{
+    color: var(--Dark-blue, #30324A);
+    text-align: center;
+    font-family: Poppins;
+    font-size: clamp(3rem, 10vw ,2rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+form > div{
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 8px;
+}
+form > div > input{
+    font-size: 24px;
+    color: var(--Dark-blue, #30324A);
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 400;
+    padding-left: 1rem;
+    border-radius: 24px;
+    border: 2px solid var(--Primary-pink, #CA53BA);
+    background-color: transparent;
+    width: 100%;
+    height: 4rem;
+}
+form > div > label{
+    margin-left: 24px;
+    font-size: 20px;
+    font-weight: 500;
+}
+form > div > input::placeholder{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form > button{
+    width: fit-content;
+    color: var(--White, #F5F5F5);
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 24px;
+    border: 2px solid #CA53BA;
+    background: var(--Dark-blue, #30324A);
+}
+@media only screen and (max-height:700px) {
+    form{
+        width: 100%;
+        height: 100%;
+        /* display: grid;
+        gap: 24px , 16px;
+        grid-template-areas: auto auto auto auto   ; */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    form > div{
+        width: 45%;
+    }
+}
+   
