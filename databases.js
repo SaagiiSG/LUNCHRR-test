@@ -17,8 +17,8 @@ export async function s_name(id){
    return rows[0]
 }
 
-export async function a_name(name){
-   const [result] =  await con.query(`insert into test(name,tulbur) values('${name}',${8000})`)
+export async function a_name(names, surname, angi, phone){
+   const [result] =  await con.query(`insert into test(name,surname,class,phone,payment) values('${names}','${surname}',${angi},${phone},${8000})`)
    const id = result.insertId
    return s_name(id)
 }

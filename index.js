@@ -1,15 +1,23 @@
 import express from 'express'
+import cors from 'cors'
 import { Names, s_name, a_name, d_name, u_name } from './databases.js'
 import bodyParser from 'body-parser'
 
 const app = express()
+
+app.use(cors({
+    origin: 'http://localhost:5173',
+    methods: ['GET', 'POST', 'DELETE']
+}))
+
 app.use(bodyParser.json())
 app.use(express.json())  
 
 
+
 app.get('/userName', async (req, res)=>{
     const name = await Names() 
-    res.json({names: name})
+    res.json(name)
 
     // res.send(name[0])
 })
@@ -22,8 +30,8 @@ app.get('/userName/:id', async (req, res)=>{
 
 app.post('/userName/add', async (req, res)=>{
     console.log(req.body)
-    const {name} = req.body
-    const  name_h = await a_name(name) 
+    const {names, surname, angi, phone} = req.body
+    const  name_h = await a_name(names, surname, angi, phone) 
     res.status(201).send(name_h)
 })
 app.delete('/userName/d', async (req, res)=>{
