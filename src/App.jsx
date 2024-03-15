@@ -25,7 +25,7 @@ function App() {
       <Router>
       <Routes>
         <Route path="/" element={<Navbar username={username} class={enrolledclass}/>}/>
-        <Route index element={<Dashboard username={username} class={enrolledclass}/>}/>
+        <Route index element={<Dashboard username={username} class={enrolledclass} />}/>
         <Route path="/addCard" element={<Add  username={username} class={enrolledclass}/>}/>
         <Route path="/deleteCard" element={<Delete  username={username} class={enrolledclass}/>}/>
       </Routes>

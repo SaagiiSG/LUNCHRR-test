@@ -12,20 +12,23 @@ import Topthree from "./top-three/top-three";
 //   } from "react-router-dom"; 
 export default function Dashboard(props){
     const [users , setUsers] = React.useState([])
-
+    
+    
     React.useEffect(() => {
         data();
-    }, [])
 
-    
+    }, [])
     const data = async () => {
-        await fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .then(json => setUsers(json))
-        .catch((err) => {
-            console.log(err)
+        await fetch(`http://localhost:8080/userName`,{
+            method:'get',
+            headers:{
+            "Content-Type":"application/json"
+        }
         })
+        .then(response => response.json())
+        .then(data => {setUsers(data)})
     }
+    
 return(
     <section className="dashboard-container">
         <Navbar username={props.username} class={props.class}/>
@@ -54,27 +57,17 @@ return(
                         </div>
                     </div>
                     <div className="tabel-info">
-                        {users.map((user) => 
-                            <Student
-                                studentName={user.username}
-                                studentPnumber={user.id}
-                                studentPayment={user.email}
-                            />
-                            )}
-                            {users.map((user) => 
-                            <Student
-                                studentName={user.username}
-                                studentPnumber={user.id}
-                                studentPayment={user.email}
-                            />
-                            )}
-                            {users.map((user) => 
-                            <Student
-                                studentName={user.username}
-                                studentPnumber={user.id}
-                                studentPayment={user.email}
-                            />
-                            )}
+                        {
+                            users.map((user)=>{
+                               return  <Student studentPnumber={user.phone}
+                                studentName={user.name}
+                                studentPayment={user.payment}
+                          /> 
+                              
+                            })
+
+                        }
+                            
                     </div>
                     
                 </div>
