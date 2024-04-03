@@ -36,7 +36,7 @@
     transition: 300ms;
     scale: 1.01;
 }
-.active-card{
+.activecard{
     display: flex;
     width: 830px;
     padding: 8px 16px;
@@ -53,10 +53,10 @@
     line-height: normal;
     letter-spacing: -0.96px;
 }
-.active-card > .name > p{
+.activecard > .name > p{
     color: var(--White, #F5F5F5);
 }
-.active-card > div.selector
+.activecard > div.selector
 {
     border-radius: 100px;
     border: var(--Number, 1px) solid var(--Primary-pink, #CA53BA);

@@ -4,7 +4,6 @@
     background-color: #30324a;
     display: flex;
     flex-direction: row;
-    /* align-items: flex-end; */
     overflow: hidden;
     align-items: flex-start;
 
@@ -179,4 +178,38 @@ line-height: normal;
     height: 80%;
     display: flex;
     flex-direction: column;
+}
+.tabel-user{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.tabel-user > button{
+    height: 56px;
+    width: 30.5%;
+    display: flex;
+    padding: 16px 12px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background-color: transparent;
+    color: var(--Dark-blue, #30324A);
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: linear-gradient(180deg, rgba(255,255,255,0.00 , rgba(255,255,255,0)));
+    transition: 300ms;
+}
+.tabel-user > button:hover{
+    transition: 300ms;
+    border-bottom: 2px solid var(--Primary-pink, #CA53BA);
+}
+.tabel-user > button:focus{
+    border-bottom: 2px solid var(--Primary-pink, #CA53BA);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(202, 83, 186, 0.10) 100%);
+    transition: 300ms;
 }
