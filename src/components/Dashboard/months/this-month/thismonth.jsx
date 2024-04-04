@@ -6,38 +6,37 @@ import Student from "../../student-detail/student";
 
 export default function Current(props){
     const display = props.display
+    const [users , setUsers] = React.useState([])
+    React.useEffect(() => {
+        data();
+    }, [])
 
-    const users = [
-        {
-            name:"SaranOchir",
-            phone:"88163115",
-            id:1,
-            payment:16000
-        },
-        {
-            name:"Tuguldur",
-            phone:"88163115",
-            id:2,
-            payment:24000
-        },
-        {
-            name:"Emujin",
-            phone:"88163115",
-            id:3,
-            payment:32000
-        },
-
-    ]
-    
+    const data = async () => {
+        await fetch(`http://localhost:8080/userName`,{
+            method:'get',
+            headers:{
+            "Content-Type":"application/json"
+        }
+        })
+        .then(response => response.json())
+        .then(data => {setUsers(data)}) 
+        
+    }
     if(display){
         return(
             <div className="tabel-info">
                           
-            { users.map((user)=>{
-                return  <Student studentPnumber={user.phone}
+            {
+            users.map((user)=>{
+                     return ( user.class ==  10) ? (
+                              <Student studentPnumber={user.phone}
                    studentName={user.name}
                     studentPayment={user.payment}
-                   /> })}
+                             />  ):( 
+                    <h1 className="none">none</h1>
+                   )
+                })
+                   }
              
              </div>
 

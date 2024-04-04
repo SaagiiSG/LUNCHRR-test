@@ -1,7 +1,7 @@
 
 import React, { useEffect } from "react"
 import "./card.css"
-import classNames from "classnames"
+import classNames from "classname"
 export default function Card(props){
 
     const [active , isActive] = React.useState(false)
@@ -9,7 +9,7 @@ export default function Card(props){
     function Change(){
         isActive(!active)
     }
-
+    
     return(
     
         <button onClick={Change} className={classNames('card' , {'activecard':isActive})}>
@@ -21,7 +21,7 @@ export default function Card(props){
                     <p>{props.id}</p>
                 </li>
                 <div className="selector">.</div>
-
+                
             </button>)
  
     

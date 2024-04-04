@@ -23,18 +23,23 @@ const Delete = (props) => {
             //         console.log(err)
             //     })
             // }
-            const users = [
-                {
-                    id:1,
-                    name:"Saran-Ochir",
-                    grade:11
-                },
-                {
-                    id:2,
-                    name:"Etso",
-                    grade:11
+            const [users , setUsers] = React.useState([{}])
+            React.useEffect(() => {
+                data();
+            }, [])
+        
+            const data = async () => {
+                await fetch(`http://localhost:8080/userName`,{
+                    method:'get',
+                    headers:{
+                    "Content-Type":"application/json"
                 }
-            ]
+                })
+                .then(response => response.json())
+                .then(data => {setUsers(data)}) 
+                
+            }
+
            
             // console.log(users);
             return( 

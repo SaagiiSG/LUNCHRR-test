@@ -13,42 +13,7 @@ import BeforeMonth from "./months/before-month/beforeMonth";
 
 
 export default function Dashboard(props){
-    const datas = [
-        {
-            name:"SaranOchir",
-            phone:"88163115",
-            id:1,
-            payment:16000
-        },
-        {
-            name:"Tuguldur",
-            phone:"88163115",
-            id:2,
-            payment:24000
-        },
-        {
-            name:"Emujin",
-            phone:"88163115",
-            id:3,
-            payment:32000
-        },
-
-    ]
-        const length = datas.length-1
-        const totalmeals = datas[length].payment;
-        let mealNum = totalmeals/8000
-        const totalStudent = datas.length
-        let totalPay = 0;
-        for(let i=0 ; i < length ; i++){
-            totalPay += datas[i+1].payment
-        }
-
-    const [users , setUsers] = React.useState([])
-    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const monthIndex = (new Date().getMonth());
-    const monthBefore = monthNames[monthIndex - 2]
-    const lastMonth = monthNames[monthIndex - 1]
-    const monthName = monthNames[monthIndex]
+    const [users , setUsers] = React.useState([{}])
     React.useEffect(() => {
         data();
     }, [])
@@ -61,9 +26,38 @@ export default function Dashboard(props){
         }
         })
         .then(response => response.json())
-        .then(data => {setUsers(data)})
+        .then(data => {setUsers(data)}) 
+        
     }
+    let filteredUsers = [{}];
+for(let i = 0 ; i<users.length; i++){
     
+    if(users[i].class === 10){
+       filteredUsers.push(users[i])
+    }
+}
+    console.log(filteredUsers)
+    const datas = filteredUsers 
+    console.log(datas.length)
+        const length = datas.length-1
+        const totalmeals = datas[length].payment;
+        let mealNum = totalmeals/8000
+        const totalStudent = datas.length-1
+        let totalPay = 0;
+        for(let i=0 ; i < length ; i++){
+            totalPay += datas[i+1].payment
+        }
+
+    
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const monthIndex = (new Date().getMonth());
+    const monthBefore = monthNames[monthIndex - 2]
+    const lastMonth = monthNames[monthIndex - 1]
+    const monthName = monthNames[monthIndex]
+
+    
+    
+
 
     const [thisMonth , setThismonth] = React.useState(true)
     const [dislastMonth, setLastmonth] = React.useState(false);
@@ -143,6 +137,7 @@ return(
           <p className="download-el">Download excel sheet <img src={Download}/></p>
       </div>
   </section>
-  </section>            )
+  </section>            
+  )
     
 }
