@@ -2,6 +2,7 @@
 import React, { useEffect } from "react"
 import "./card.css"
 import classNames from "classname"
+import Trashcan from "../../../assets/delete_outline.svg"
 export default function Card(props){
 
     const [active , isActive] = React.useState(false)
@@ -12,7 +13,7 @@ export default function Card(props){
     
     return(
     
-        <button onClick={Change} className={classNames('card' , {'activecard':isActive})}>
+        <button onClick={Change} className="card">
             
                 <li  className="name">
 
@@ -20,7 +21,7 @@ export default function Card(props){
                     <p>{props.name}</p>
                     <p>{props.id}</p>
                 </li>
-                <div className="selector">.</div>
+                <img className="selector" src={Trashcan}/>
                 
             </button>)
  

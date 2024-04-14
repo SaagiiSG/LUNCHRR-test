@@ -43,6 +43,9 @@ const Delete = (props) => {
                             />
                             ))
                         }
+                        <Card 
+                            grade={"11.1"}
+                            name={"Saran-Ochir"}/>
                            
                                
                                
@@ -52,7 +55,7 @@ const Delete = (props) => {
                 
                 <section className="button-container">
 
-                    <ButtonMain buttonname={"Delete user"}/>
+                    {/* <ButtonMain buttonname={"Delete user"}/> */}
 
                 </section>
                 

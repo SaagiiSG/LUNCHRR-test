@@ -4,7 +4,7 @@ import Delete from "./components/delete-page/delete"
 import Login from "./components/login/Login"
 import Profile from "./components/navbar/profile/profile"
 import Add from "./components/add-page/add"
-
+import "./components/login/login.css"
 import React from "react"
 import { 
   BrowserRouter as Router, 
@@ -22,7 +22,31 @@ function App() {
 
   return(
     <section>
-      {/* <Login/> */}
+          <section className="login-background">
+
+              <div className="container">
+
+                  <h1 className="header">Access your account</h1>
+
+                  <div className="input-container">
+                          <div className="input-el">
+                              <h3 className="input-label">Email</h3>
+                              <input type="text" className="input" />
+                          </div>
+                          
+                          <div className="input-el">
+                              <h3 className="input-label">Password</h3>
+                              <input type="password" className="input"/>
+                          </div>
+                          
+                  </div>
+                  
+
+                  <button className="button" id="button">Log in</button>
+                  
+              </div>
+
+            </section>
       <Router>
       <Routes>
         <Route path="/" element={<Navbar username={username} class={enrolledclass}/>}/>

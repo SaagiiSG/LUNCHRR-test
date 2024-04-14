@@ -30,11 +30,13 @@
     height: 30px;
     border-radius: 100px;
     color: transparent;
-    border: var(--Number, 1px) solid #30324A;
 }
-.card:hover{
+.card:hover > .selector{
     transition: 300ms;
-    scale: 1.01;
+    scale: 1.3;
+}
+.card > .selector{
+    transition: 300ms;
 }
 .activecard{
     display: flex;
@@ -61,4 +63,8 @@
     border-radius: 100px;
     border: var(--Number, 1px) solid var(--Primary-pink, #CA53BA);
     background: var(--Primary-pink, #CA53BA);
+}
+.selector:hover{
+    transition: 300ms ;
+    scale: 1.4;
 }
