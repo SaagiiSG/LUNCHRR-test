@@ -21,6 +21,7 @@ const Navbar = (props) => {
                     
                 </section>
             <Outlet/>
+            <button id="button">Log in</button>
         </nav>
         
     )

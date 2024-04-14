@@ -9,20 +9,6 @@ import React, { useEffect } from "react"
    
 
 const Delete = (props) => {
-
-            // const [users , setUsers] = React.useState([])
-
-            // useEffect(() => {
-            //     data();
-            // }, [])
-            // const data = async () => {
-            //     await fetch('https://jsonplaceholder.typicode.com/users')
-            //     .then(response => response.json())
-            //     .then(json => setUsers(json))
-            //     .catch((err) => {
-            //         console.log(err)
-            //     })
-            // }
             const [users , setUsers] = React.useState([{}])
             React.useEffect(() => {
                 data();
@@ -40,8 +26,6 @@ const Delete = (props) => {
                 
             }
 
-           
-            // console.log(users);
             return( 
             <section className="delete-page">
                 <Navbar username={props.username} class={props.class}/>

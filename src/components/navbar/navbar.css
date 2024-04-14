@@ -5,15 +5,13 @@
     font-family: "Poppins" , sans-serif;
 }
 nav{
-    /* padding-right: 2px; */
     min-width: 255px;
     max-width: 255px;
-    max-height: 100vh ;
     display: flex;
     flex-direction: column; 
-    /* overflow-y: scroll; */
     height: fit-content;
-    /* padding-bottom: 24px; */
+    height: 100vh;
+    justify-content: space-between;
     background-color: #30324A;
 
 }
@@ -77,4 +75,20 @@ nav::-webkit-scrollbar{
 
 .scroll::-webkit-scrollbar{
     display: none;
+}
+nav > #button{
+    align-self: center;
+    width: 95%;
+    margin-bottom: 8px;
+    transition: 150ms;
+    border: 1.6px solid #30324A;
+}
+nav > #button:hover{
+    transition: 150ms;
+    scale: 1.02;
+    align-self: center;
+    width: 95%;
+    margin-bottom: 8px;
+    color: #ca53ba;
+    border:1.6px solid #ca53ba;
 }

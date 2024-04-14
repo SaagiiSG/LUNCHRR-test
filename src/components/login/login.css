@@ -2,39 +2,49 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    font-family: 'Poppins', sans-serif;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .login-background{
-
-    width: 100%;
-    height: 100vh;
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(258deg, #CA53BA 0%, #30324A 91.28%);
-    font-family:"Poppins", sans-serif;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
 }
+
 .container{
-    width: auto;
-    height: auto;
+    width: 60%;
+    height: 70vh;
     display: flex;
     padding: 2vw 8vw;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 2vw;
     border-radius: 48px;
     border: 1px solid rgba(255, 255, 255, 0.63);
-    background: rgba(255, 255, 255, 0.26);
+    background: rgba(156, 156, 156, 0.26);
     backdrop-filter: blur(22.200000762939453px);
+    color: #30324A;
    
+}
+.input-container{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
 }
 .header{
     width: 377px;
     height: auto;
-    color: var(--White, #F5F5F5);
+    /* color: var(--White, #F5F5F5); */
     text-align: center;
     font-family: Poppins;
     font-size: 3vw;
@@ -44,7 +54,7 @@
 }
 .input-label{
     margin-left: 24px;
-    color: var(--White, #F5F5F5);
+    /* color: var(--White, #F5F5F5); */
     font-family: Poppins;
     font-size: 1em;
     font-style: normal;
@@ -54,8 +64,8 @@
 .input{
     padding-left: 20px;
     font-size: 24px;
-    color: #F5F5F5;
-    width: 35vw;
+    /* color: #F5F5F5; */
+    /* width: auto; */
     min-width:300px ;
     height: 4rem;
     flex-shrink: 0;
@@ -63,13 +73,11 @@
     border: 2px solid var(--Dark-blue, #30324A);
     background-color: transparent;
 }
-.login-background > .button{
-    display: flex;
-    width: 183px;
-    height: 64px;
-    padding: 10px 13px 10px 12px;
-    justify-content: center;
-    align-items: center;
+#button{
+    width: auto;
+    height: auto;
+    padding: 12px 24px;
+    font-size: 24px;
     border-radius: 24px;
     border: var(--Number, 1px) solid rgba(255, 255, 255, 0.37);
     background: #30324A;
@@ -80,7 +88,6 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    transition: 300ms;
 }
 .button:hover{
     scale: 1.02;
