@@ -1,4 +1,4 @@
-import React from "react";
+    import React from "react";
 import "../dashboard.css"
 import Navbar from "../../navbar/navbar";
 import Download from "../download arrow.svg"
