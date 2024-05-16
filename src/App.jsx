@@ -28,6 +28,9 @@ function Login(props){
       console.log("clicked");
     }
   }
+  const [ousideClick , setOutsideClick] = React.useState(false)
+
+
   if(props.display || displasState){
     
     return(
@@ -81,23 +84,23 @@ function App() {
   }
 
   return(
-    <section>
-            {/* <Login display={logState}/> */}
-            {/* <button className="logout-button" onClick={Pop}>Log in<img src={logout} alt="" /></button> */}
-      <Router>
-      <Routes>
-        <Route path="/" element={<Navbar username={username} class={enrolledclass}/>}/>
-        <Route index element={<CurrentDashBoard username={username} class={enrolledclass} />}/>
-        <Route path="/addCard" element={<Add  username={username} class={enrolledclass}/>}/>
-        {/* <Route path="/login"element={<Login  />} /> */}
-        <Route path="/deleteCard" element={<Delete  username={username} class={enrolledclass}/>}/>
-        <Route path="/dashboard/current-month" element={<CurrentDashBoard username={username} class={enrolledclass}/>}/>
-        <Route path="/dashboard/last-month" element={<LastMonth username={username} class={enrolledclass}/>}/>
-        <Route path="/dashboard/prior-to-last-month" element={<BeforeDashBoard username={username} class={enrolledclass}/>}/>
-      </Routes>
-  </Router>
-  </section>
-      // <Drink/>
+  //   <section>
+  //           <Login display={logState}/>
+  //           <button className="logout-button" onClick={Pop}>Log in<img src={logout} alt="" /></button>
+  //     <Router>
+  //     <Routes>
+  //       <Route path="/" element={<Navbar username={username} class={enrolledclass}/>}/>
+  //       <Route index element={<CurrentDashBoard username={username} class={enrolledclass} />}/>
+  //       <Route path="/addCard" element={<Add  username={username} class={enrolledclass}/>}/>
+  //       {/* <Route path="/login"element={<Login  />} /> */}
+  //       <Route path="/deleteCard" element={<Delete  username={username} class={enrolledclass}/>}/>
+  //       <Route path="/dashboard/current-month" element={<CurrentDashBoard username={username} class={enrolledclass}/>}/>
+  //       <Route path="/dashboard/last-month" element={<LastMonth username={username} class={enrolledclass}/>}/>
+  //       <Route path="/dashboard/prior-to-last-month" element={<BeforeDashBoard username={username} class={enrolledclass}/>}/>
+  //     </Routes>
+  // </Router>
+  // </section>
+      <Drink/>
   )
 
 }
