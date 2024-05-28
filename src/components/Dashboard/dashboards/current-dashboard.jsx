@@ -82,10 +82,10 @@ for(let i = 0 ; i<users.length; i++){
     </section>
 
     
-    <div className="floating-island">
+    {/* <div className="floating-island">
         <p>Class Total: {totalPay}</p>
         <p className="download-el">Download excel sheet <img src={Download}/></p>
-    </div>
+    </div> */}
 </section>
 </section>            
 )

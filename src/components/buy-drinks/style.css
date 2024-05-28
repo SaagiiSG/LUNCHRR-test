@@ -19,14 +19,21 @@
 }
 
 .drink-buttons{
-    width: 100%;
+    width: 90%;
+    height: fit-content;
+    padding: 4px;
+    overflow: visible;
     display: flex;
     gap: 48px;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    overflow-x: scroll  ;
+}
+.drink-buttons::-webkit-scrollbar{
+    display: none;
 }
 .drink-buttons > button{
-    width: 270px;
+    min-width: 270px;
     height: 350px;
     background-color: transparent;
     border: 2px solid transparent;
@@ -39,15 +46,19 @@
     padding-top: 16px;
     gap: 24px;
     transition: 300ms;
+    border: 1px solid #30324A;
 }
 .drink-buttons > button:hover{
     transition: 300ms;
     scale: 1.02;
     box-shadow: 10px 10px 25px #30324a2a;
 }
-.drink-buttons > button:active{
-    transition: 300ms;
+.drink-buttons > button:focus{
+    transition: 100ms;
+    animation: ease-in-out;
     scale: 1.02;
+    border-radius: 24px;
+    border: 3px solid #ca53ba;
     box-shadow: 10px 10px 25px #30324a2a;
 }
 .drink-buttons > button > h3{
@@ -98,4 +109,7 @@
 }
 .island:hover > div >img:active{
     cursor: pointer;
+}
+.water{
+    height: 160px;
 }
